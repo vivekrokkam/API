@@ -1,6 +1,6 @@
 using System;
 
-namespace MVPAPI
+namespace SalesAPI
 {
     public class WeatherForecast
     {

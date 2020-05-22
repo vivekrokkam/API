@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace MVPAPI.Model
+namespace SalesAPI.Model
 {
-    public partial class Product
+    public partial class Customer
     {
-        public Product()
+        public Customer()
         {
             Sales = new HashSet<Sales>();
         }
@@ -17,10 +17,10 @@ namespace MVPAPI.Model
         [Required]
         [StringLength(100)]
         public string Name { get; set; }
-        [Column(TypeName = "decimal(10, 2)")]
-        public decimal Price { get; set; }
+        [StringLength(100)]
+        public string Address { get; set; }
 
-        [InverseProperty("Product")]
+        [InverseProperty("Customer")]
         public virtual ICollection<Sales> Sales { get; set; }
     }
 }

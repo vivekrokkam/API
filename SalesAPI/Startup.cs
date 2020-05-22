@@ -11,9 +11,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using MVPAPI.Model;
+using SalesAPI.Model;
 
-namespace MVPAPI
+namespace SalesAPI
 {
     public class Startup
     {
@@ -29,8 +29,8 @@ namespace MVPAPI
         {
             services.AddControllers();
             services.AddControllers()
-                .AddNewtonsoftJson(x => x.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
-                 );
+               .AddNewtonsoftJson(x => x.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+                );
 
 
             services.AddDbContext<MVP7Context>(options => options.UseSqlServer(Configuration.GetConnectionString("DevConnection")));

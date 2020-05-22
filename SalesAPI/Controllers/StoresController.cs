@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using MVPAPI.Model;
+using SalesAPI.Model;
 
-namespace MVPAPI.Controllers
+namespace SalesAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
